@@ -3,14 +3,18 @@ package hello.Spring.service;
 import hello.Spring.domain.Member;
 import hello.Spring.repository.MemberRepository;
 import hello.Spring.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+//@Service //스프링이 컨테이너에 멤버서비스로 등록을 함
 public class MemberService {
 
     private final MemberRepository memberRepository;
 
+    //@Autowired // 멤버리퍼지토리랑 연결됨
     public MemberService(MemberRepository memberRepository){ // memberRepository를 외부에서 넣어주도록 함
         this.memberRepository = memberRepository;
     }

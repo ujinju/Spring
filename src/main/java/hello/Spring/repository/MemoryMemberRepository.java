@@ -1,9 +1,11 @@
 package hello.Spring.repository;
 
 import hello.Spring.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
+//@Repository //스프링 컨테이너에 레퍼지토리로 등록됨.
 public class MemoryMemberRepository implements MemberRepository{
 
     private static Map<Long, Member> store = new HashMap<>(); //key가 회원의 id이니까 Long으로 함. 값은 Member
